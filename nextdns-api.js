@@ -33,20 +33,6 @@ export async function addDomainToDenyList(denyDomainObject) {
   }
 }
 
-export async function resetDenyList() {
-  const option = {
-    method: "PUT",
-    headers: { ...API_KEY_HEADER, "Content-Type": "application/json" },
-    body: JSON.stringify([]),
-  };
-  try {
-    await fetch(`${NEXTDNS_ENDPOINT}/profiles/${PROFILE_ID}/denylist`, option);
-  } catch (error) {
-    console.error("Error:", error);
-    throw error;
-  }
-}
-
 export async function getDenyList() {
   const option = {
     method: "GET",
