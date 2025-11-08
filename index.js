@@ -5,9 +5,6 @@ const BLOCKLIST_URLS = []; // Add blocklist url
 
 async function uploadDomainToNextDNS() {
   try {
-    // Reset deny list before uploading new domains
-    await resetDenyList();
-
     if (BLOCKLIST_URLS.length != 0) {
       console.log("Start downloading blocklist files...");
       await downloadFiles(BLOCKLIST_URLS);
