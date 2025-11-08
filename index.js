@@ -1,4 +1,4 @@
-import addDomainToDenyList from "./nextdns-api.js";
+import { addDomainToDenyList } from "./nextdns-api.js";
 import { downloadFiles, parseFile } from "./file-handler.js";
 
 const BLOCKLIST_URLS = []; // Add blocklist url
